@@ -5,105 +5,261 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Principal</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-    <!-- <link rel="icon" href="favicon.jpg"> -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- barra de navegação -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar-spy">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#empresa">Atividades</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#equipe">Níveis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#depoimentos">Prêmios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accordionExample">Logar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
+    <!-- input -->
     <div class="principal-div-input">
         <input class="principal-input" placeholder="Digite o que procura aqui">
     </div>
 
-    <h3>Educacional</h3>
+    <!-- Modal -->
+
+      <!-- Modal -->
+        <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Aceitar atividade ?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                `Atividade de ${balblalblblablabl} clique em aceitar para que pontuar nessa atividade.`
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Aceitar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    <!-- Atividades -->
+    <h3 class='atividades-secao-titulo'>Educacional</h3>
 
     <div class="container-atividade">
-        <div class="card">
-            <div class="frame-image"></div>
-            <h2 class="card-title">Olímpiadas de Matemática</h2>
-            <ul class="card-atributes">
-                <li>+ 10 pontos</li>
-            </ul>
-        </div>
-    
-        <div class="card">
-            <div class="frame-image"></div>
-            <h2 class="card-title">Olímpiadas de Matemática</h2>
-            <ul class="card-atributes">
-                <li>+ 10 pontos</li>
-            </ul>
-        </div>
-    
-        <div class="card">
-            <div class="frame-image"></div>
-            <h2 class="card-title">Olímpiadas de Matemática</h2>
-            <ul class="card-atributes">
-                <li>+ 10 pontos</li>
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <!-- <li class="card-pontos" class='card-pontos'>+ 10 pontos</li> -->
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo"> -->
+                <button onclick="apareceModal()">
+                    + 10 pontos
+                </button>
             </ul>
         </div>
 
-        <div class="card">
-            <div class="frame-image"></div>
-            <h2 class="card-title">Olímpiadas de Matemática</h2>
-            <ul class="card-atributes">
-                <li>+ 10 pontos</li>
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Curso de finanças pessoais</h2>
+            <ul class="card-atributos">
+                <!-- <li class="card-pontos">+ 35 pontos</li> -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                    + 35 pontos
+                </button>
             </ul>
         </div>
 
-        <div class="card">
-            <div class="frame-image"></div>
-            <h2 class="card-title">Olímpiadas de Matemática</h2>
-            <ul class="card-atributes">
-                <li>+ 10 pontos</li>
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Educação no trânsito</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 5 pontos</li>
+            </ul>
+        </div>
+
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
+            </ul>
+        </div>
+
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Participação no Enem</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 150 pontos</li>
             </ul>
         </div>
 
     </div>
 
-    <h3>Profissionalizante</h3>
+    <h3 class='atividades-secao-titulo'>Profissionalizante</h3>
 
     <div class="container-atividade">
-
-        <div class="card">
-            <div class="frame-image"></div>
-            <h2 class="card-title">Olímpiadas de Matemática</h2>
-            <ul class="card-atributes">
-                <li>+ 10 pontos</li>
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
             </ul>
         </div>
 
-        <div class="card">
-            <div class="frame-image"></div>
-            <h2 class="card-title">Olímpiadas de Matemática</h2>
-            <ul class="card-atributes">
-                <li>+ 10 pontos</li>
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
             </ul>
         </div>
 
-        <div class="card">
-            <div class="frame-image"></div>
-            <h2 class="card-title">Olímpiadas de Matemática</h2>
-            <ul class="card-atributes">
-                <li>+ 10 pontos</li>
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
             </ul>
         </div>
 
-        <div class="card">
-            <div class="frame-image"></div>
-            <h2 class="card-title">Olímpiadas de Matemática</h2>
-            <ul class="card-atributes">
-                <li>+ 10 pontos</li>
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
             </ul>
         </div>
 
-        <div class="card">
-            <div class="frame-image"></div>
-            <h2 class="card-title">Olímpiadas de Matemática</h2>
-            <ul class="card-atributes">
-                <li>+ 10 pontos</li>
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
             </ul>
         </div>
+
     </div>
+
+    <h3 class='atividades-secao-titulo'>Idiomas</h3>
+
+    <div class="container-atividade">
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
+            </ul>
+        </div>
+
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
+            </ul>
+        </div>
+
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
+            </ul>
+        </div>
+
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
+            </ul>
+        </div>
+
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <h3 class='atividades-secao-titulo'>Comportamental</h3>
+
+    <div class="container-atividade">
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
+            </ul>
+        </div>
+
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
+            </ul>
+        </div>
+
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
+            </ul>
+        </div>
+
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
+            </ul>
+        </div>
+
+        <div class="card-atividade">
+            <div class="frame-imagem"></div>
+            <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+            <ul class="card-atributos">
+                <li class="card-pontos">+ 10 pontos</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
 </body>
 </html>
