@@ -10,13 +10,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="./aceitarAtividade.js"></script>
-    <script src="./apareceModal.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- barra de navegação -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar-spy">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar-spy">
             <a class="navbar-brand" href="#">Logo</a>
             <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,6 +63,8 @@
         </div>
         </div>
 
+<div class="container-fluid">
+
     <div class="principal-div-input">
     
         <!-- Atividades -->
@@ -71,55 +72,59 @@
 
         <div class="container-atividade">
             <div class="card-atividade">
-                <div class="frame-imagem">
-                    <!-- <img src="./img/olimpiada-matematica.jpg"> -->
+                <div class="frame-imagem"></div>
+                <div class="card-informações">
+                    <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+                    <ul class="card-atributos"></ul>
+                    <button type="button" class="btn btn-primary" onclick="aceitarAtividade(10)" data-toggle="modal" data-target="#modalExemplo">
+                        + 10 pontos
+                    </button>
                 </div>
-                <h2 class="card-titulo">Olímpiadas de Matemática</h2>
-                <ul class="card-atributos">
-                    <button type="button" class="btn btn-primary" onclick="aceitarAtividade(10)" data-toggle="modal" data-target="#modalExemplo">
-                        + 10 pontos
-                    </button>
-                </ul>
             </div>
 
             <div class="card-atividade">
                 <div class="frame-imagem"></div>
-                <h2 class="card-titulo">Curso de finanças pessoais</h2>
-                <ul class="card-atributos">
-                    <button type="button" class="btn btn-primary" onclick="aceitarAtividade(35)" data-toggle="modal" data-target="#modalExemplo">
-                        + 35 pontos
-                    </button>
-                </ul>
+                <div class="card-informações">
+                    <h2 class="card-titulo">Curso de finanças pessoais</h2>
+                    <ul class="card-atributos">
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-primary button-pontos " onclick="aceitarAtividade(35)" data-toggle="modal" data-target="#modalExemplo">
+                    + 35 pontos
+                </button>
             </div>
 
             <div class="card-atividade">
                 <div class="frame-imagem"></div>
-                <h2 class="card-titulo">Educação no trânsito</h2>
-                <ul class="card-atributos">
-                    <button type="button" class="btn btn-primary" onclick="aceitarAtividade(5)" data-toggle="modal" data-target="#modalExemplo">
-                        + 5 pontos
-                    </button>
-                </ul>
+                <div class="card-informações">
+                    <h2 class="card-titulo">Educação no trânsito</h2>
+                    <ul class="card-atributos"></ul>
+                </div>
+                <button type="button" class="btn btn-primary button-pontos" onclick="aceitarAtividade(5)" data-toggle="modal" data-target="#modalExemplo">
+                    + 5 pontos
+                </button>
             </div>
 
             <div class="card-atividade">
                 <div class="frame-imagem"></div>
-                <h2 class="card-titulo">Olímpiadas de Matemática</h2>
-                <ul class="card-atributos">
-                    <button type="button" class="btn btn-primary" onclick="aceitarAtividade(10)" data-toggle="modal" data-target="#modalExemplo">
-                        + 10 pontos
-                    </button>
-                </ul>
+                <div class="card-informações">
+                    <h2 class="card-titulo">Olímpiadas de Matemática</h2>
+                    <ul class="card-atributos"></ul>
+                </div>
+                <button type="button" class="btn btn-primary button-pontos" onclick="aceitarAtividade(10)" data-toggle="modal" data-target="#modalExemplo">
+                    + 10 pontos
+                </button>
             </div>
 
             <div class="card-atividade">
                 <div class="frame-imagem"></div>
-                <h2 class="card-titulo">Participação no Enem</h2>
-                <ul class="card-atributos">
-                    <button type="button" class="btn btn-primary" onclick="aceitarAtividade(150)" data-toggle="modal" data-target="#modalExemplo">
-                        + 150 pontos
-                    </button>
-                </ul>
+                <div class="card-informações">
+                    <h2 class="card-titulo">Participação no Enem</h2>
+                    <ul class="card-atributos"></ul>
+                </div>
+                <button type="button" class="btn btn-primary button-pontos" onclick="aceitarAtividade(150)" data-toggle="modal" data-target="#modalExemplo">
+                    + 150 pontos
+                </button>
             </div>
 
         </div>
@@ -288,6 +293,7 @@
             </div>
         </div>
     </div>
+</div>
 
 </body>
 </html>
