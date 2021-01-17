@@ -6,6 +6,11 @@ body {
     margin: 20px;
 }
 
+.logo {
+    color:black!important;
+    font-weight: 600!important;
+}
+
 .navbar {
     background-color: #BDFEDA;
     font-family: 'Roboto', sans-serif;
